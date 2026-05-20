@@ -1,18 +1,16 @@
 workflows:
   android-apk:
-    name: Android APK Build
+    name: Android APK
 
     environment:
+      vars:
+        PACKAGE_NAME: "com.btc.bot"
       node: latest
 
     scripts:
       - npm install
-      - npx expo export
+      - npm install -g eas-cli
+      - eas build --platform android --profile preview --non-interactive
 
     artifacts:
-      - dist/**
-
-    publishing:
-      email:
-        recipients:
-          - your@email.com
+      - "*.apk"
