@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "BTC Bot",
+    "slug": "btc-bot",
+    "version": "1.0.0",
+    "platforms": ["android"]
+  }
+}
